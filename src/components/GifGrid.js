@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 export const GifGrid = ({category}) => {
+
+    
+    const [images, setImages] = useState([]);
+
+    // Use hook 'useEffect' to render only the first time
+    useEffect(() => {
+        getGifs()
+    }, [])
 
     const getGifs = async () => {
         const url = 'https://api.giphy.com/v1/gifs/search?&limit=10&q=Dragon+Ball&api_key=a6moXgoQ6vuFxhVHum2nE6CPtZdV66Uz';
@@ -16,13 +24,21 @@ export const GifGrid = ({category}) => {
 
         });
         console.log(gifs);
+        setImages(gifs);
     };
-
-    getGifs();
 
     return (
         <div>
             <h3> { category } </h3>
+            <ol>
+                {
+                    images.map(({id, title}) => 
+                        (
+                            <li key={id}>{title}</li>
+                        )
+                    )
+                }
+            </ol>
         </div>
     )
 }
