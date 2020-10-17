@@ -3,9 +3,8 @@ import { AddCategory } from './components/AddCategory';
 import { GifGrid } from './components/GifGrid';
 // import ReactDOM from 'react-dom';
 
-const GifExpertApp = () => {
-    const initialState = ['Moto GP'];
-    const [categories, setCategories] = useState(initialState);
+const GifExpertApp = ({defaultCategories = []}) => {
+    const [categories, setCategories] = useState(defaultCategories);
 
     return (
         <>
