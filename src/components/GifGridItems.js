@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export const GifGridItems = ({id, title, url }) => {
+export const GifGridItems = ({ title, url }) => {
 
     return (
         <div className="card animate__animated animate__fadeIn">
@@ -8,4 +9,9 @@ export const GifGridItems = ({id, title, url }) => {
             <p>{ title }</p>
         </div>
     )
+}
+
+GifGridItems.propTypes = {
+    title: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired
 }

@@ -4,7 +4,12 @@ exports[`GifGridItems test suite should show GifGridItems component properly 1`]
 <div
   className="card animate__animated animate__fadeIn"
 >
-  <img />
-  <p />
+  <img
+    alt="Panda ball!"
+    src="https://media1.giphy.com/media/lcySndwSDLxC4eOU86/giphy.gif?cid=5af68a6akfrj0nvj652tera4juc697ktqhgu1oqp9znd2rkt&rid=giphy.gif"
+  />
+  <p>
+    Panda ball!
+  </p>
 </div>
 `;
