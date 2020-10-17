@@ -13,7 +13,7 @@ export const AddCategory = ({setCategories}) => {
         // Avoid default behaviour that will submit and refresh whole view
         e.preventDefault();
         if (inputValue.trim().length > 2) {
-            setCategories(cats => [...cats, inputValue.trim()]);
+            setCategories(cats => [inputValue.trim(), ...cats]); // Show new first
             setInputValue('');
         }
         
