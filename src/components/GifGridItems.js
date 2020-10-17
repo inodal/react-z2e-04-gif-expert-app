@@ -4,8 +4,9 @@ export const GifGridItems = ({id, title, url }) => {
 
     console.log(`${id}:\ntitle: ${title} \nurl: ${url}`);
     return (
-        <div>
-            { title }
+        <div className="card">
+            <img src={ url } alt={ title } />
+            <p>{ title }</p>
         </div>
     )
 }

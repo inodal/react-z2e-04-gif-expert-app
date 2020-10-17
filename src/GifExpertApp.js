@@ -4,7 +4,7 @@ import { GifGrid } from './components/GifGrid';
 // import ReactDOM from 'react-dom';
 
 const GifExpertApp = () => {
-    const initialState = ['Dragon Ball'];
+    const initialState = ['MotoGP'];
     const [categories, setCategories] = useState(initialState);
 
     return (

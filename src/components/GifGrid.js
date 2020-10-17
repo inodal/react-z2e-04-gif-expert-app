@@ -12,7 +12,7 @@ export const GifGrid = ({category}) => {
     }, [])
 
     const getGifs = async () => {
-        const url = 'https://api.giphy.com/v1/gifs/search?&limit=10&q=Dragon+Ball&api_key=a6moXgoQ6vuFxhVHum2nE6CPtZdV66Uz';
+        const url = `https://api.giphy.com/v1/gifs/search?&limit=10&q=${category}&api_key=a6moXgoQ6vuFxhVHum2nE6CPtZdV66Uz`;
         const resp = await fetch(url);
         const { data } = await resp.json();
 
@@ -29,16 +29,19 @@ export const GifGrid = ({category}) => {
     };
 
     return (
-        <div>
+        <>
             <h3> { category } </h3>
-            {
-                images.map(img => (
-                    <GifGridItems 
-                        key={ img.id }
-                        { ...img } 
-                    />
-                ))
-            }
-        </div>
+            <div class="card-grid">
+                
+                {
+                    images.map(img => (
+                        <GifGridItems 
+                            key={ img.id }
+                            { ...img } 
+                        />
+                    ))
+                }
+            </div>
+        </>
     )
 }
