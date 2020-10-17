@@ -9,23 +9,18 @@ export const useFetchGifs = (category) => {
         loading: true
     });
 
-    // Use hook 'useEffect' to render only the first time
+    // Use hook 'useEffect' to render
     useEffect(() => {
         getGifs(category)
           .then(imgs => {
-
-            setTimeout(() => {
-                setState({
-                    data: imgs,
-                    loading: false
-                })
-            }, 500);
-
-            
+              setTimeout(() => {
+                  setState({
+                      data: imgs,
+                      loading: false
+                  })
+                }, 500);
             })
     }, [category]);
-
-
 
     return state; // { data: [], loading: true }
 }
