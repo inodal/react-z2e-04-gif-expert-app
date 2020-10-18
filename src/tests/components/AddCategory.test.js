@@ -22,10 +22,11 @@ describe('AddCategory component test suit', () => {
     test('should change text box', () => {
         const input = wrapper.find('input');
         const value ='Hello world!';
+        const paragraphPrefix = 'GifExpertApp: ';
 
         input.simulate('change', {target: {value}});
 
-        expect(wrapper.find('p').text().trim()).toBe(value);
+        expect(wrapper.find('p').text().trim()).toBe(paragraphPrefix+value);
     })
     
     test('should NOT post the form on submit', () => {

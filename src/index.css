@@ -33,3 +33,7 @@ input {
 .card img {
   max-height: 170px;
 }
+
+.hidden-elem {
+  color: transparent;
+}

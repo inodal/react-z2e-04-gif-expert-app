@@ -5,12 +5,17 @@ exports[`AddCategory component test suit should show AddCategory component prope
   <form
     onSubmit={[Function]}
   >
-    <p />
     <input
       onChange={[Function]}
+      placeholder="Search funny GIFs!! Type a topic and press enter NOW!!"
       type="text"
       value=""
     />
   </form>
+  <p
+    className="hidden-elem"
+  >
+    GifExpertApp: 
+  </p>
 </Fragment>
 `;

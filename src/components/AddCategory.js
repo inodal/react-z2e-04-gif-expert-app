@@ -22,15 +22,14 @@ export const AddCategory = ({setCategories}) => {
     return (
         <>
         <form onSubmit= { handleSubmit }>
-        <p>{ inputValue }</p> 
             <input 
                 type ="text"
                 value = { inputValue }
                 onChange = { handleInputChange }
-                
+                placeholder = "Search funny GIFs!! Type a topic and press enter NOW!!"
             />
         </form>
-            
+        <p className="hidden-elem">GifExpertApp: { inputValue }</p>   
         </>
     )
 }
